@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('rain.jfif'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+  }
+
+  .name{
+    position: absolute;
+    top: 10%; /* Adjust vertical position */
+    left: 8%;
+    margin: 12px 12px;
+    color: rgb(0, 0, 0);
+    font-family: "Kaushan Script", serif;
+    font-size: 5rem;
+    font-weight: bolder;
+    z-index: 2; /* Ensure it appears on top */
+    animation: slideBottom 1s ease forwards;
+  }
+
+/*KEYFRAMES ANIMATION*/
+@keyframes slideBottom {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.pos{
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+  .search-box {
+    position: absolute;
+    display: flex;
+    margin-bottom: 20px;
+    z-index: 2; /* Ensure it appears on top */
+    cursor: pointer;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-box input::placeholder {
+    color: #ffffff; 
+    opacity: 1;     
+}
+  
+  .search-box input {
+    width: 200px; /* Adjust as needed for desired width */
+  }
+  
+
+  .search-box button{
+    border-radius: 8px;
+  }
+
+  .search-box button:hover{
+    background-color: #5388c4;
+  }
+  
+  .heading {
+    position: absolute;
+    top: 33%; /* Adjust vertical position */
+    left: 27%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    transform: translateX(-50%);
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 2; /* Ensure it appears on top */
+  }
+  
+  .container {
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; /* Ensure it appears on top */
+  }
+
+  .container h5{
+    border-bottom: 3px solid white;
+    margin-top: 3px;
+    font-weight: bolder;
+  }
+  
+  .weather-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 15px;
+    padding: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    width: 30%; /* Set a fixed width if necessary */
+  }
+
+
+.forecast-hourly{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forecast-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-item .img2 {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+ 
+.forecast-daily {
+    display: flex;
+    flex-direction: column; /* Makes the items display in a column (vertically) */
+    align-items: stretch;
+    gap: 5px;
+    width: 100%;
+} 
+
+#daily-data{
+    width: 100%; /* Makes each forecast item take full width */
+}
+
+.forecast-item1 {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.temp-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.progress {
+    height: 1px;
+    width: 60px;
+    background-color: rgba(27, 100, 209, 0.2);
+}
+
+.progress-bar {
+  height: 100%;
+    background-color: #4a90e2;
+}
+
+.weather-display {
+  position: absolute;
+  top: 57%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 2; /* Ensure it appears on top */
+  border-radius: 15px;
+  width: 30%; /* Adjust as needed */
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  animation: slideLeft 1s ease forwards;
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes slideLeft {
+  0% {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.temp-value {
+  font-size: 64px;
+  font-weight: bolder;
+}
+
+.location {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.details {
+  color: white;
+  font-size: 23px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
